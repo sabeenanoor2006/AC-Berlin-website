@@ -1,0 +1,102 @@
+* { box-sizing: border-box; }
+:root {
+  --ink: #044687;
+  --muted: #66717c;
+  --paper: #eecc20;
+  --white: #ffffff;
+  --accent: #3e8bd3;
+  --accent-dark: #dadfee;
+  --line: #deded8;
+  --soft: #ecebe5;
+}
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
+a { color: inherit; }
+.container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.site-header { position: sticky; top: 0; z-index: 20; background: rgba(246,245, 239, 0.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px);  }
+.nav { min-height: 76px; display: flex; align-items: center; gap: 28px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; letter-spacing: .04em; margin-right: auto; }
+.brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--ink); color: var(--white); font-size: 12px; }
+nav { display: flex; gap: 22px; font-size: 14px; }
+nav a { text-decoration: none; color: var(--muted); transition: color 0.2s ease; }
+nav a:hover { color: var(--ink); }
+.language { border: 1px solid var(--ink); background: transparent; padding: 8px 12px; border-radius: 999px; cursor: pointer; font-weight: 700; color: var(--ink);}
+.hero { background: var(--ink); color: white; min-height: 650px; display: grid; align-items: center; }
+.hero-content { display: grid; grid-template-columns: 1.25fr .75fr; gap: 80px; align-items: center; padding: 80px 0; }
+.hero-copy .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 800; margin: 0 0 14px; color: var(--accent); }
+.hero h1 { font-size: clamp(48px, 7vw, 84px); line-height: .98; margin: 0 0 25px; max-width: 800px; letter-spacing: -.045em; }
+.hero-text { font-size: 20px; max-width: 650px; color: #dce1e5; }
+.hero-actions { display: flex; gap: 12px; margin: 32px 0 18px; }
+.button { display: inline-block; text-decoration: none; padding: 13px 20px; border-radius: 6px; font-weight: 800; transition:
+    transform 0.2s ease,
+    background 0.2s ease;}
+    .button:hover {
+  transform: translateY(-2px);
+}
+.primary { background: var(--accent); color: var(--ink-dark); }
+.primary:hover { background: var(--accent-dark); }
+.secondary { border: 1px solid #68717a; color: white;   background: transparent;}
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.language-note { color: #aeb7be; font-size: 13px; }
+.hero-card { background: white; color: var(--ink); padding: 36px; border-radius: 10px; box-shadow: 0 24px 70px rgba(0,0,0,.22); }
+.card-label { color: var(--accent); font-weight: 900; font-size: 12px; letter-spacing: .12em; }
+.hero-card h2 { font-size: 34px; line-height: 1.05; margin: 14px 0; }
+.hero-card a { color: var(--accent-dark); font-weight: 800; text-decoration: none; }
+.intro { background: white; padding: 80px 0; }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03em; margin: 0; }
+.intro p:last-child, .section-heading > p { color: var(--muted); font-size: 18px; margin: 0; }
+.section { padding: 100px 0; }
+.section-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 45px; }
+.sport-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 18px; }
+.sport-card { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 30px; min-height: 300px; }
+.sport-card.featured { background: #fff3ef; border-color: #f0c5bb; }
+.sport-icon { font-size: 34px; margin-bottom: 20px; }
+.sport-card h3 { font-size: 28px; margin: 0 0 10px; }
+.sport-card p, .sport-card li { color: var(--muted); }
+.sport-card ul { padding-left: 20px; margin: 20px 0; }
+.sport-card a { color: var(--accent-dark); font-weight: 800; text-decoration: none; }
+.welcome { background: #e8e7e0; padding: 100px 0; }
+.welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.welcome-photo { min-height: 470px; border-radius: 10px; background: #c8c7c0; display: grid; place-items: center; color: #67665f; text-align: center; padding: 30px; }
+.welcome-points { margin-top: 35px; display: grid; gap: 18px; }
+.welcome-points div { display: grid; gap: 2px; padding-bottom: 16px; border-bottom: 1px solid #cccac1; }
+.welcome-points span { color: var(--muted); }
+.training-box { background: white; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.training-box div { padding: 24px 28px; display: grid; grid-template-columns: 180px 1fr; gap: 20px; border-bottom: 1px solid var(--line); }
+.training-box div:last-child { border-bottom: 0; }
+.training-box span { color: var(--muted); }
+.join { background: var(--accent); color: white; padding: 100px 0; }
+.join .eyebrow { color: #ffd8cf; }
+.join-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; }
+.join ol { list-style: none; padding: 0; margin: 0; }
+.join li { display: grid; grid-template-columns: 60px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.35); }
+.join li > span { font-weight: 900; }
+.join li strong { font-size: 20px; }
+.join li p { margin: 4px 0 0; color: #e4eff8; }
+.contact { background: white; }
+.contact-grid { display: grid; grid-template-columns: 1fr .7fr; gap: 80px; align-items: center; }
+.contact-card { display: grid; gap: 15px; background: var(--paper); border: 1px solid var(--line); padding: 30px; border-radius: 10px; }
+.contact-card a:not(.button) { font-size: 19px; font-weight: 800; text-decoration: none; }
+footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13px; }
+.footer { display: flex; justify-content: space-between; gap: 20px; }
+.footer strong { color: white; }
+@media (max-width: 850px) {
+  nav { display: none; }
+  .hero-content, .intro-grid, .section-heading, .sport-grid, .welcome-grid, .join-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-content { gap: 45px; }
+  .section-heading { gap: 20px; }
+  .sport-grid { gap: 14px; }
+  .training-box div { grid-template-columns: 1fr; gap: 4px; }
+  .footer { flex-direction: column; }
+}
+@media (max-width: 520px) {
+  .container { width: min(100% - 28px, 1120px); }
+  .hero { min-height: auto; }
+  .hero-content { padding: 60px 0; }
+  .hero h1 { font-size: 50px; }
+  .hero-actions { flex-direction: column; }
+  .button { text-align: center; }
+}
