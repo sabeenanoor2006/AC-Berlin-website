@@ -19,7 +19,7 @@ a { color: inherit; }
 .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--ink); color: var(--white); font-size: 12px; }
 nav { display: flex; gap: 22px; font-size: 14px; }
 nav a { text-decoration: none; color: var(--ink); transition: color 0.2s ease; }
-nav a:hover { color: var(--white); }
+nav a:hover { color: var(--ink); }
 .language { border: 1px solid var(--ink); background: transparent; padding: 8px 12px; border-radius: 999px; cursor: pointer; font-weight: 700; color: var(--ink);}
 .menu-toggle {
   display: none;
@@ -78,13 +78,95 @@ nav a:hover { color: var(--white); }
 h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03em; margin: 0; }
 .intro p:last-child, .section-heading > p { color: var(--muted); font-size: 18px; margin: 0; }
 .section { padding: 100px 0; }
+.news {
+  background: var(--paper);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.news-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 30px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-date {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  margin-bottom: 18px;
+}
+
+.news-card h3 {
+  font-size: 25px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+.news-card p {
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+.news-card a {
+  margin-top: auto;
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.news-card a:hover {
+  text-decoration: underline;
+}
 .section-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 45px; }
 .sport-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 18px; }
+.sport-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
 .sport-card { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 30px; min-height: 300px; }
 .sport-card.featured { background: #fff3ef; border-color: #f0c5bb; }
 .sport-icon { font-size: 34px; margin-bottom: 20px; }
 .sport-card h3 { font-size: 28px; margin: 0 0 10px; }
 .sport-card p, .sport-card li { color: var(--muted); }
+.sport-summary {
+  margin-top: 22px;
+  display: grid;
+  gap: 4px;
+}
+
+.sport-summary strong {
+  margin-top: 12px;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.sport-summary span {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.sport-more {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.sport-more:hover {
+  text-decoration: underline;
+}
 .sport-card ul { padding-left: 20px; margin: 20px 0; }
 .sport-card a { color: var(--accent-dark); font-weight: 800; text-decoration: none; }
 .welcome { background: #e8e7e0; padding: 100px 0; }
@@ -93,10 +175,68 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
 .welcome-points { margin-top: 35px; display: grid; gap: 18px; }
 .welcome-points div { display: grid; gap: 2px; padding-bottom: 16px; border-bottom: 1px solid #cccac1; }
 .welcome-points span { color: var(--muted); }
-.training-box { background: white; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.training-list {
+  display: grid;
+  gap: 18px;
+}
+
+.training-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 28px 30px;
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 20px;
+}
+
+.training-icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.training-content h3 {
+  font-size: 30px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  color: var(--ink);
+}
+
+.training-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 40px;
+}
+
+.training-info div {
+  display: grid;
+  gap: 4px;
+}
+
+.training-info strong {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+}
+
+.training-info span {
+  color: var(--muted);
+}
+
+.training-info a {
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.training-info a:hover {
+  text-decoration: underline;
+}
 .training-box div { padding: 24px 28px; display: grid; grid-template-columns: 180px 1fr; gap: 20px; border-bottom: 1px solid var(--line); }
 .training-box div:last-child { border-bottom: 0; }
 .training-box span { color: var(--muted); }
+
 .join {
   background: var(--accent);
   color: var(--ink);
@@ -106,6 +246,16 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
   color: var(--ink);
 }
 .join-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; }
+.join-intro {
+  margin-top: 24px;
+  max-width: 430px;
+  color: #dce1e5;
+  font-size: 17px;
+}
+
+.join-steps {
+  margin: 0;
+}
 .join ol { list-style: none; padding: 0; margin: 0; }
 .join li { display: grid; grid-template-columns: 60px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.35); }
 .join li > span { font-weight: 900; }
@@ -152,7 +302,11 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
     padding: 12px 10px;
     border-bottom: 1px solid var(--line);
   }
-
+  
+  .main-nav a:hover {
+  color: var(--ink);
+  background: var(--paper);
+}
   .main-nav a:last-child {
     border-bottom: 0;
   }
@@ -179,10 +333,22 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
     gap: 20px;
   }
 
-  .sport-grid {
-    gap: 14px;
-  }
+  .sport-grid {gap: 14px;}
+  .news-grid {
+  grid-template-columns: 1fr;
+}
 
+.training-card {
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.training-info {
+  grid-template-columns: 1fr;
+}
+.news-grid {
+  grid-template-columns: 1fr;
+}
   .training-box div {
     grid-template-columns: 1fr;
     gap: 4px;
