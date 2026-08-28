@@ -1,25 +1,25 @@
 * { box-sizing: border-box; }
 :root {
-  --ink: #044687;
-  --muted: #66717c;
-  --paper: #eecc20;
+  --ink: #0b2d59;
+  --muted: #0b2d59;
+  --paper: #f2c900;
   --white: #ffffff;
-  --accent: #3e8bd3;
-  --accent-dark: #dadfee;
-  --line: #deded8;
-  --soft: #ecebe5;
+  --accent: #f2c900;
+  --accent-dark: #d6ad00;
+  --line: #d8d3b8;
+  --soft: #f5e9a8;
 }
 html { scroll-behavior: smooth; }
 body { margin: 0; font-family: Inter, Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
 a { color: inherit; }
 .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-.site-header { position: sticky; top: 0; z-index: 20; background: rgba(246,245, 239, 0.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px);  }
+.site-header { position: sticky; top: 0; z-index: 20; background: rgba(246,229,141,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px);  }
 .nav { min-height: 76px; display: flex; align-items: center; gap: 28px; position: relative; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; letter-spacing: .04em; margin-right: auto; }
 .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--ink); color: var(--white); font-size: 12px; }
 nav { display: flex; gap: 22px; font-size: 14px; }
-nav a { text-decoration: none; color: var(--muted); transition: color 0.2s ease; }
-nav a:hover { color: var(--ink); }
+nav a { text-decoration: none; color: var(--ink); transition: color 0.2s ease; }
+nav a:hover { color: var(--white); }
 .language { border: 1px solid var(--ink); background: transparent; padding: 8px 12px; border-radius: 999px; cursor: pointer; font-weight: 700; color: var(--ink);}
 .menu-toggle {
   display: none;
@@ -41,7 +41,18 @@ nav a:hover { color: var(--ink); }
 }
 .hero { background: var(--ink); color: white; min-height: 650px; display: grid; align-items: center; }
 .hero-content { display: grid; grid-template-columns: 1.25fr .75fr; gap: 80px; align-items: center; padding: 80px 0; }
-.hero-copy .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 800; margin: 0 0 14px; color: var(--accent); }
+.hero-copy .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 14px;
+  color: var(--accent);
+}
+
+.hero-copy .eyebrow.club-name {
+  text-transform: none;
+}
 .hero h1 { font-size: clamp(48px, 7vw, 84px); line-height: .98; margin: 0 0 25px; max-width: 800px; letter-spacing: -.045em; }
 .hero-text { font-size: 20px; max-width: 650px; color: #dce1e5; }
 .hero-actions { display: flex; gap: 12px; margin: 32px 0 18px; }
@@ -51,7 +62,7 @@ nav a:hover { color: var(--ink); }
     .button:hover {
   transform: translateY(-2px);
 }
-.primary { background: var(--accent); color: var(--ink-dark); }
+.primary { background: var(--accent-dark); color: var(--ink-dark); }
 .primary:hover { background: var(--accent-dark); }
 .secondary { border: 1px solid #68717a; color: white;   background: transparent;}
 .secondary:hover {
@@ -86,14 +97,23 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
 .training-box div { padding: 24px 28px; display: grid; grid-template-columns: 180px 1fr; gap: 20px; border-bottom: 1px solid var(--line); }
 .training-box div:last-child { border-bottom: 0; }
 .training-box span { color: var(--muted); }
-.join { background: var(--accent); color: white; padding: 100px 0; }
-.join .eyebrow { color: #ffd8cf; }
+.join {
+  background: var(--accent);
+  color: var(--ink);
+  padding: 100px 0;
+}
+.join .eyebrow {
+  color: var(--ink);
+}
 .join-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; }
 .join ol { list-style: none; padding: 0; margin: 0; }
 .join li { display: grid; grid-template-columns: 60px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.35); }
 .join li > span { font-weight: 900; }
 .join li strong { font-size: 20px; }
-.join li p { margin: 4px 0 0; color: #e4eff8; }
+.join li p {
+  margin: 4px 0 0;
+  color: var(--ink);
+}
 .contact { background: white; }
 .contact-grid { display: grid; grid-template-columns: 1fr .7fr; gap: 80px; align-items: center; }
 .contact-card { display: grid; gap: 15px; background: var(--paper); border: 1px solid var(--line); padding: 30px; border-radius: 10px; }
