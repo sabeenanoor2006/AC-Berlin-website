@@ -82,12 +82,6 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
   background: var(--paper);
 }
 
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
 .news-card {
   background: white;
   border: 1px solid var(--line);
@@ -127,6 +121,153 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
 .news-card a:hover {
   text-decoration: underline;
 }
+
+.portraits {
+  background: white;
+}
+
+.portrait-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.portrait-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.portrait-photo {
+  height: 260px;
+  background: #d8d7d0;
+  overflow: hidden;
+}
+
+.portrait-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portrait-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portrait-content {
+  padding: 25px;
+}
+
+.portrait-content h3 {
+  font-size: 24px;
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+.portrait-role {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  margin: 0 0 10px;
+}
+.portrait-content p {
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.portrait-content a {
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.portrait-content a:hover {
+  text-decoration: underline;
+}.biography {
+  margin-top: 50px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 45px;
+  scroll-margin-top: 100px;
+}
+
+.biography-content {
+  max-width: 850px;
+}
+
+.biography h2 {
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1;
+  margin: 0 0 25px;
+}
+
+.biography p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 18px;
+}
+
+.biography p:last-child {
+  margin-bottom: 0;
+}
+.biography {
+  border-left: 5px solid var(--accent);
+}
+
+.biography-content .eyebrow {
+  margin-bottom: 12px;
+}
+
+.biography-content p {
+  max-width: 780px;
+}
+
+.information {
+  background: var(--paper);
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.information-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 30px;
+  min-height: 220px;
+}
+
+.information-card h3 {
+  font-size: 25px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+.information-card p {
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.information-card a {
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.information-card a:hover {
+  text-decoration: underline;
+}
+
 .section-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 45px; }
 .sport-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 18px; }
 .sport-grid {
@@ -334,10 +475,7 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   }
 
   .sport-grid {gap: 14px;}
-  .news-grid {
-  grid-template-columns: 1fr;
-}
-
+  
 .training-card {
   grid-template-columns: 1fr;
   gap: 18px;
@@ -346,10 +484,13 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
 .training-info {
   grid-template-columns: 1fr;
 }
-.news-grid {
+.portrait-grid {
   grid-template-columns: 1fr;
 }
-  .training-box div {
+.information-grid {
+  grid-template-columns: 1fr;
+}
+.training-box div {
     grid-template-columns: 1fr;
     gap: 4px;
   }
@@ -365,4 +506,158 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   .hero h1 { font-size: 50px; }
   .hero-actions { flex-direction: column; }
   .button { text-align: center; }
+}
+/* =========================================
+   TRAINING PAGE
+   ========================================= */
+
+.training-page {
+  padding-top: 40px;
+}
+
+.training-page .section-heading {
+  margin-bottom: 32px;
+}
+
+.training-page .training-card {
+  margin-bottom: 28px;
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.training-page .training-info {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.5fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.training-page .training-info > div:first-child {
+  padding: 8px 0;
+}
+
+.training-page .training-info h3 {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.training-page .training-info p {
+  margin-bottom: 18px;
+}
+
+
+/* TRAINING BOX */
+
+.training-box {
+  background: rgba(169, 199, 235, 0.888);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px 28px;
+}
+
+.training-box h4 {
+  margin: 0 0 18px;
+  font-size: 18px;
+}
+
+
+/* EACH TRAINING ENTRY */
+
+.training-box > div {
+  display: grid;
+  grid-template-columns: 150px minmax(180px, 1fr);
+  column-gap: 24px;
+  row-gap: 6px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid rgba(23, 33, 43, 0.15);
+}
+
+.training-box > div:first-of-type {
+  padding-top: 8px;
+}
+
+.training-box > div:last-child {
+  border-bottom: none;
+  padding-bottom: 8px;
+}
+
+.training-box > div > strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.training-box > div > span {
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.training-box > div > p {
+  grid-column: 2;
+  margin: 2px 0 0;
+  line-height: 1.6;
+}
+
+
+/* EXTRA SPACE FOR FOOTBALL */
+
+.training-page .training-card:has(.eyebrow:first-child) {
+  overflow: hidden;
+}
+
+
+/* =========================================
+   TRAINING PAGE MOBILE
+   ========================================= */
+
+@media (max-width: 850px) {
+
+  .training-page .training-info {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .training-page .training-card {
+    padding: 22px;
+  }
+
+  .training-box {
+    padding: 20px;
+  }
+
+  .training-box > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px 0;
+  }
+
+  .training-box > div > p {
+    grid-column: 1;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 520px) {
+
+  .training-page .training-card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .training-box {
+    padding: 18px;
+  }
+
+  .training-box > div {
+    padding: 15px 0;
+  }
+
 }
