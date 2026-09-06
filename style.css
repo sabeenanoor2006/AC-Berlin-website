@@ -651,4 +651,503 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
     padding: 15px 0;
   }
 
+}/* =========================================================
+   TRAINER PAGE
+   ========================================================= */
+
+.page-hero {
+  padding: 90px 0 70px;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.page-hero .eyebrow {
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-hero h1 {
+  max-width: 850px;
+  margin: 0 0 20px;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.page-intro {
+  max-width: 720px;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--white);
+}
+
+.content-section {
+  padding: 80px 0;
+}
+
+.narrow-content {
+  max-width: 850px;
+}
+
+.narrow-content h2 {
+  margin-bottom: 24px;
+}
+
+.narrow-content p {
+  line-height: 1.8;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  margin-bottom: 15px;
+}
+
+.section-heading p {
+  line-height: 1.7;
+}
+
+.trainers-section {
+  background: var(--soft);
+}
+
+.trainer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.trainer-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.trainer-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--soft);
+}
+
+.trainer-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.placeholder-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.trainer-content {
+  padding: 28px;
+}
+
+.trainer-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+.trainer-role {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.trainer-languages {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.trainer-content > p:last-child {
+  line-height: 1.7;
+}
+
+.cta-section {
+  padding: 80px 0;
+  background: var(--accent);
+  color: var(--ink);
+  text-align: center;
+}
+
+.cta-section h2 {
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+
+  .page-hero {
+    padding: 65px 0 50px;
+  }
+
+  .content-section {
+    padding: 60px 0;
+  }
+
+  .trainer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-content {
+    padding: 24px;
+  }
+
+}
+
+/* =========================================================
+   TRAINER PAGE
+   ========================================================= */
+
+.page-hero {
+  padding: 90px 0 70px;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.page-hero .eyebrow {
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-hero h1 {
+  max-width: 850px;
+  margin: 0 0 20px;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.page-intro {
+  max-width: 720px;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--white);
+}
+
+.content-section {
+  padding: 80px 0;
+}
+
+.narrow-content {
+  max-width: 850px;
+}
+
+.narrow-content h2 {
+  margin-bottom: 24px;
+}
+
+.narrow-content p {
+  line-height: 1.8;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  margin-bottom: 15px;
+}
+
+.section-heading p {
+  line-height: 1.7;
+}
+
+.trainers-section {
+  background: var(--soft);
+}
+
+.trainer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.trainer-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.trainer-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--soft);
+}
+
+.trainer-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.placeholder-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.trainer-content {
+  padding: 28px;
+}
+
+.trainer-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+.trainer-role {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.trainer-languages {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.trainer-content > p:last-child {
+  line-height: 1.7;
+}
+
+.cta-section {
+  padding: 80px 0;
+  background: var(--accent);
+  color: var(--ink);
+  text-align: center;
+}
+
+.cta-section h2 {
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+
+  .page-hero {
+    padding: 65px 0 50px;
+  }
+
+  .content-section {
+    padding: 60px 0;
+  }
+
+  .trainer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-content {
+    padding: 24px;
+  }
+
+}
+
+/* =========================================================
+   GEMEINSCHAFT PAGE
+   ========================================================= */
+
+.community-gallery-section {
+  background: var(--soft);
+}
+
+.community-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.community-photo {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.community-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.community-photo:hover img {
+  transform: scale(1.04);
+}
+
+.community-message {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 20px;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.community-message .eyebrow {
+  color: var(--accent);
+}
+
+.community-message h2 {
+  margin-bottom: 18px;
+}
+
+.community-message p:last-child {
+  max-width: 700px;
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+
+@media (max-width: 850px) {
+
+  .community-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .community-photo {
+    aspect-ratio: 16 / 10;
+  }
+
+  .community-message {
+    padding: 32px 24px;
+  }
+
+}
+/* =========================================================
+   INFORMATION PAGE
+   ========================================================= */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.info-card {
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.info-card h3 {
+  margin: 0 0 14px;
+  font-size: 1.4rem;
+}
+
+.info-card p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.text-link {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 850px) {
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 26px;
+  }
+
+}
+/* =========================================================
+   MOHAMMAD PROFILE PAGE
+   ========================================================= */
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.profile-photo {
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--soft);
+}
+
+.profile-photo img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.profile-content {
+  max-width: 720px;
+}
+
+.profile-content h2 {
+  margin-bottom: 24px;
+}
+
+.profile-content p:not(.eyebrow) {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 850px) {
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .profile-photo {
+    max-width: 500px;
+  }
+
 }
