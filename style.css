@@ -1151,3 +1151,188 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   }
 
 }
+/* =========================================================
+   AC-BERLIN HEADER LOGO
+   ========================================================= */
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand-text strong {
+  font-size: 1rem;
+  letter-spacing: .04em;
+}
+
+.brand-text span {
+  margin-top: 3px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+
+/* =========================================================
+   AC-BERLIN SITE FOOTER
+   ========================================================= */
+
+.site-footer {
+  background: var(--ink);
+  color: var(--white);
+  padding: 65px 0 25px;
+}
+
+.site-footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.site-footer h3 {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.footer-club-name {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.footer-tagline {
+  max-width: 300px;
+  margin: 0;
+  color: #dce1e5;
+  line-height: 1.6;
+}
+
+.footer-contact {
+  display: grid;
+  gap: 7px;
+  color: #dce1e5;
+  line-height: 1.5;
+}
+
+.footer-contact a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: var(--accent);
+}
+
+.footer-nav {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-nav a {
+  color: #dce1e5;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,.18);
+}
+
+.footer-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.18);
+  color: #bfc6cc;
+  font-size: .85rem;
+}
+
+
+/* =========================================================
+   HEADER + FOOTER MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-text span {
+    display: none;
+  }
+
+  .site-footer {
+    padding: 50px 0 22px;
+  }
+
+  .site-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-logos {
+    margin-top: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-text strong {
+    font-size: .9rem;
+  }
+
+  .footer-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+}
+#kontakt {
+  scroll-margin-top: 100px;
+}
