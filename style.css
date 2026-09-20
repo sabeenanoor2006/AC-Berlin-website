@@ -1,4 +1,7 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --ink: #0b2d59;
   --muted: #0b2d59;
@@ -9,41 +12,132 @@
   --line: #d8d3b8;
   --soft: #f5e9a8;
 }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: Inter, Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
-a { color: inherit; }
-.container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-.site-header { position: sticky; top: 0; z-index: 20; background: rgba(246,229,141,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px);  }
-.nav { min-height: 76px; display: flex; align-items: center; gap: 28px; position: relative; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; letter-spacing: .04em; margin-right: auto; }
-.brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--ink); color: var(--white); font-size: 12px; }
-nav { display: flex; gap: 22px; font-size: 14px; }
-nav a { text-decoration: none; color: var(--ink); transition: color 0.2s ease; }
-nav a:hover { color: var(--ink); }
-.language { border: 1px solid var(--ink); background: transparent; padding: 8px 12px; border-radius: 999px; cursor: pointer; font-weight: 700; color: var(--ink);}
-.menu-toggle {
-  display: none;
 
-  border: 1px solid var(--ink);
-  background: transparent;
+html {
+  scroll-behavior: smooth;
+}
 
-  width: 42px;
-  height: 42px;
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
 
-  border-radius: 8px;
+a {
+  color: inherit;
+}
 
-  font-size: 22px;
-  line-height: 1;
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
 
-  cursor: pointer;
+/* =========================================================
+   HEADER
+   ========================================================= */
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(246, 229, 141, 0.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-right: auto;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  font-size: 14px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
   color: var(--ink);
 }
-.hero { background: var(--ink); color: white; min-height: 650px; display: grid; align-items: center; }
-.hero-content { display: grid; grid-template-columns: 1.25fr .75fr; gap: 80px; align-items: center; padding: 80px 0; }
+
+.language {
+  border: 1px solid var(--ink);
+  background: transparent;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--ink);
+  background: transparent;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  background: var(--ink);
+  color: white;
+  min-height: 650px;
+  display: grid;
+  align-items: center;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 80px;
+  align-items: center;
+  padding: 80px 0;
+}
+
 .hero-copy .eyebrow {
   text-transform: uppercase;
-  letter-spacing: .16em;
+  letter-spacing: 0.16em;
   font-size: 16px;
   font-weight: 800;
   margin: 0 0 14px;
@@ -53,33 +147,164 @@ nav a:hover { color: var(--ink); }
 .hero-copy .eyebrow.club-name {
   text-transform: none;
 }
-.hero h1 { font-size: clamp(48px, 7vw, 84px); line-height: .98; margin: 0 0 25px; max-width: 800px; letter-spacing: -.045em; }
-.hero-text { font-size: 20px; max-width: 650px; color: #dce1e5; }
-.hero-actions { display: flex; gap: 12px; margin: 32px 0 18px; }
-.button { display: inline-block; text-decoration: none; padding: 13px 20px; border-radius: 6px; font-weight: 800; transition:
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 84px);
+  line-height: 0.98;
+  margin: 0 0 25px;
+  max-width: 800px;
+  letter-spacing: -0.045em;
+}
+
+.hero-text {
+  font-size: 20px;
+  max-width: 650px;
+  color: #dce1e5;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin: 32px 0 18px;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 13px 20px;
+  border-radius: 6px;
+  font-weight: 800;
+  transition:
     transform 0.2s ease,
-    background 0.2s ease;}
-    .button:hover {
+    background 0.2s ease;
+}
+
+.button:hover {
   transform: translateY(-2px);
 }
-.primary { background: var(--accent-dark); color: var(--ink); }
-.primary:hover { background: var(--accent-dark); }
-.secondary { border: 1px solid #68717a; color: white;   background: transparent;}
+
+.primary {
+  background: var(--accent-dark);
+  color: var(--ink);
+}
+
+.primary:hover {
+  background: var(--accent-dark);
+}
+
+.secondary {
+  border: 1px solid #68717a;
+  color: white;
+  background: transparent;
+}
+
 .secondary:hover {
   background: rgba(255, 255, 255, 0.08);
 }
-.language-note { color: #aeb7be; font-size: 13px; }
-.hero-card { background: white; color: var(--ink); padding: 36px; border-radius: 10px; box-shadow: 0 24px 70px rgba(0,0,0,.22); }
-.card-label { color: var(--accent); font-weight: 900; font-size: 12px; letter-spacing: .12em; }
-.hero-card h2 { font-size: 34px; line-height: 1.05; margin: 14px 0; }
-.hero-card a { color: var(--accent-dark); font-weight: 800; text-decoration: none; }
-.intro { background: white; padding: 80px 0; }
-.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03em; margin: 0; }
-.intro p:last-child, .section-heading > p { color: var(--muted); font-size: 18px; margin: 0; }
-.section { padding: 100px 0; }
+/* Training page buttons */
+
+.training-actions .button.primary {
+  background: var(--accent);
+  color: var(--ink);
+  border: 1px solid var(--accent);
+}
+
+.training-actions .button.secondary {
+  background: var(--ink);
+  color: var(--white);
+  border: 1px solid var(--ink);
+}
+
+.language-note {
+  color: #aeb7be;
+  font-size: 13px;
+}
+
+.hero-card {
+  background: white;
+  color: var(--ink);
+  padding: 36px;
+  border-radius: 10px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.card-label {
+  color: var(--accent);
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.hero-card h2 {
+  font-size: 34px;
+  line-height: 1.05;
+  margin: 14px 0;
+}
+
+.hero-card a {
+  color: var(--accent-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+  background: white;
+  padding: 80px 0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+h2 {
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.intro p:last-child,
+.section-heading > p {
+  color: var(--muted);
+  font-size: 18px;
+  margin: 0;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.section {
+  padding: 100px 0;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: end;
+  margin-bottom: 45px;
+}
+
+/* =========================================================
+   NEWS
+   ========================================================= */
+
 .news {
-  background: var(--paper);
+  background: var(--ink);
+}
+
+.news .section-heading,
+.news .section-heading h2,
+.news .section-heading p {
+  color: var(--white);
 }
 
 .news-card {
@@ -93,10 +318,10 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
 }
 
 .news-date {
-  color: var(--accent);
+  color: var(--accent-dark);
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   margin-bottom: 18px;
 }
 
@@ -121,6 +346,10 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
 .news-card a:hover {
   text-decoration: underline;
 }
+
+/* =========================================================
+   PORTRAITS
+   ========================================================= */
 
 .portraits {
   background: white;
@@ -151,6 +380,7 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
   object-fit: cover;
   display: block;
 }
+
 .portrait-content {
   padding: 25px;
 }
@@ -160,13 +390,15 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
   line-height: 1.15;
   margin: 0 0 10px;
 }
+
 .portrait-role {
   color: var(--accent);
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   margin: 0 0 10px;
 }
+
 .portrait-content p {
   color: var(--muted);
   margin: 0 0 18px;
@@ -180,13 +412,20 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
 
 .portrait-content a:hover {
   text-decoration: underline;
-}.biography {
+}
+
+/* =========================================================
+   BIOGRAPHY
+   ========================================================= */
+
+.biography {
   margin-top: 50px;
   background: white;
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 45px;
   scroll-margin-top: 100px;
+  border-left: 5px solid var(--accent);
 }
 
 .biography-content {
@@ -204,22 +443,20 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
   font-size: 17px;
   line-height: 1.7;
   margin: 0 0 18px;
+  max-width: 780px;
 }
 
 .biography p:last-child {
   margin-bottom: 0;
-}
-.biography {
-  border-left: 5px solid var(--accent);
 }
 
 .biography-content .eyebrow {
   margin-bottom: 12px;
 }
 
-.biography-content p {
-  max-width: 780px;
-}
+/* =========================================================
+   INFORMATION
+   ========================================================= */
 
 .information {
   background: var(--paper);
@@ -260,17 +497,44 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
   text-decoration: underline;
 }
 
-.section-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 45px; }
+/* =========================================================
+   SPORT OFFERS
+   ========================================================= */
+
 .sport-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
-.sport-card { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 30px; min-height: 300px; }
-.sport-card.featured { background: #fff3ef; border-color: #f0c5bb; }
-.sport-icon { font-size: 34px; margin-bottom: 20px; }
-.sport-card h3 { font-size: 28px; margin: 0 0 10px; }
-.sport-card p, .sport-card li { color: var(--muted); }
+
+.sport-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 30px;
+  min-height: 300px;
+}
+
+.sport-card.featured {
+  background: #fff3ef;
+  border-color: #f0c5bb;
+}
+
+.sport-icon {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.sport-card h3 {
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.sport-card p,
+.sport-card li {
+  color: var(--muted);
+}
+
 .sport-summary {
   margin-top: 22px;
   display: grid;
@@ -299,14 +563,66 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
 .sport-more:hover {
   text-decoration: underline;
 }
-.sport-card ul { padding-left: 20px; margin: 20px 0; }
-.sport-card a { color: var(--accent-dark); font-weight: 800; text-decoration: none; }
-.welcome { background: #e8e7e0; padding: 100px 0; }
-.welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.welcome-photo { min-height: 470px; border-radius: 10px; background: #c8c7c0; display: grid; place-items: center; color: #67665f; text-align: center; padding: 30px; }
-.welcome-points { margin-top: 35px; display: grid; gap: 18px; }
-.welcome-points div { display: grid; gap: 2px; padding-bottom: 16px; border-bottom: 1px solid #cccac1; }
-.welcome-points span { color: var(--muted); }
+
+.sport-card ul {
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
+.sport-card a {
+  color: var(--accent-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
+
+.welcome {
+  background: #e8e7e0;
+  padding: 100px 0;
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.welcome-photo {
+  min-height: 470px;
+  border-radius: 10px;
+  background: #c8c7c0;
+  display: grid;
+  place-items: center;
+  color: #67665f;
+  text-align: center;
+  padding: 30px;
+}
+
+.welcome-points {
+  margin-top: 35px;
+  display: grid;
+  gap: 18px;
+}
+
+.welcome-points div {
+  display: grid;
+  gap: 2px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #cccac1;
+}
+
+.welcome-points span {
+  color: var(--muted);
+}
+
+/* =========================================================
+   TRAINING - GENERAL
+   ========================================================= */
+
 .training-list {
   display: grid;
   gap: 18px;
@@ -348,7 +664,7 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
 .training-info strong {
   font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   color: var(--accent);
 }
 
@@ -365,142 +681,26 @@ h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03e
 .training-info a:hover {
   text-decoration: underline;
 }
-.training-box div { padding: 24px 28px; display: grid; grid-template-columns: 180px 1fr; gap: 20px; border-bottom: 1px solid var(--line); }
-.training-box div:last-child { border-bottom: 0; }
-.training-box span { color: var(--muted); }
 
-.join {
-  background: var(--accent);
-  color: var(--ink);
-  padding: 100px 0;
-}
-.join .eyebrow {
-  color: var(--ink);
-}
-.join-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; }
-.join-intro {
-  margin-top: 24px;
-  max-width: 430px;
-  color: #dce1e5;
-  font-size: 17px;
-}
-
-.join-steps {
-  margin: 0;
-}
-.join ol { list-style: none; padding: 0; margin: 0; }
-.join li { display: grid; grid-template-columns: 60px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.35); }
-.join li > span { font-weight: 900; }
-.join li strong { font-size: 20px; }
-.join li p {
-  margin: 4px 0 0;
-  color: var(--ink);
-}
-.contact { background: white; }
-.contact-grid { display: grid; grid-template-columns: 1fr .7fr; gap: 80px; align-items: center; }
-.contact-card { display: grid; gap: 15px; background: var(--paper); border: 1px solid var(--line); padding: 30px; border-radius: 10px; }
-.contact-card a:not(.button) { font-size: 19px; font-weight: 800; text-decoration: none; }
-footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13px; }
-.footer { display: flex; justify-content: space-between; gap: 20px; }
-.footer strong { color: white; }
-@media (max-width: 850px) {
-
-  .main-nav {
-    display: none;
-
-    position: absolute;
-    top: 68px;
-    left: 14px;
-    right: 14px;
-
-    background: var(--white);
-
-    border: 1px solid var(--line);
-    border-radius: 10px;
-
-    padding: 15px;
-
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .main-nav.active {
-    display: flex;
-  }
-
-  .main-nav a {
-    padding: 12px 10px;
-    border-bottom: 1px solid var(--line);
-  }
-  
-  .main-nav a:hover {
-  color: var(--ink);
-  background: var(--paper);
-}
-  .main-nav a:last-child {
-    border-bottom: 0;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .hero-content,
-  .intro-grid,
-  .section-heading,
-  .sport-grid,
-  .welcome-grid,
-  .join-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-content {
-    gap: 45px;
-  }
-
-  .section-heading {
-    gap: 20px;
-  }
-
-  .sport-grid {gap: 14px;}
-  
-.training-card {
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-.training-info {
-  grid-template-columns: 1fr;
-}
-.portrait-grid {
-  grid-template-columns: 1fr;
-}
-.information-grid {
-  grid-template-columns: 1fr;
-}
 .training-box div {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+}
 
-  .footer {
-    flex-direction: column;
-  }
+.training-box div:last-child {
+  border-bottom: 0;
 }
-@media (max-width: 520px) {
-  .container { width: min(100% - 28px, 1120px); }
-  .hero { min-height: auto; }
-  .hero-content { padding: 60px 0; }
-  .hero h1 { font-size: 50px; }
-  .hero-actions { flex-direction: column; }
-  .button { text-align: center; }
+
+.training-box span {
+  color: var(--muted);
 }
-/* =========================================
+
+/* =========================================================
    TRAINING PAGE
-   ========================================= */
+   ========================================================= */
 
 .training-page {
   padding-top: 40px;
@@ -538,11 +738,10 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   margin-bottom: 18px;
 }
 
-
 /* TRAINING BOX */
 
 .training-box {
-  background: rgba(169, 199, 235, 0.888);
+  background: var(--white);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 26px 28px;
@@ -553,7 +752,6 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   font-size: 18px;
 }
 
-
 /* EACH TRAINING ENTRY */
 
 .training-box > div {
@@ -561,9 +759,7 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   grid-template-columns: 150px minmax(180px, 1fr);
   column-gap: 24px;
   row-gap: 6px;
-
   padding: 20px 0;
-
   border-bottom: 1px solid rgba(23, 33, 43, 0.15);
 }
 
@@ -592,228 +788,119 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   line-height: 1.6;
 }
 
-
 /* EXTRA SPACE FOR FOOTBALL */
 
 .training-page .training-card:has(.eyebrow:first-child) {
   overflow: hidden;
 }
 
-
-/* =========================================
-   TRAINING PAGE MOBILE
-   ========================================= */
-
-@media (max-width: 850px) {
-
-  .training-page .training-info {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .training-page .training-card {
-    padding: 22px;
-  }
-
-  .training-box {
-    padding: 20px;
-  }
-
-  .training-box > div {
-    grid-template-columns: 1fr;
-    gap: 6px;
-    padding: 16px 0;
-  }
-
-  .training-box > div > p {
-    grid-column: 1;
-  }
-
-}
-
-
-/* =========================================
-   SMALL MOBILE
-   ========================================= */
-
-@media (max-width: 520px) {
-
-  .training-page .training-card {
-    padding: 18px;
-    border-radius: 14px;
-  }
-
-  .training-box {
-    padding: 18px;
-  }
-
-  .training-box > div {
-    padding: 15px 0;
-  }
-
-}/* =========================================================
-   TRAINER PAGE
+/* =========================================================
+   JOIN
    ========================================================= */
 
-.page-hero {
-  padding: 90px 0 70px;
+.join {
   background: var(--ink);
   color: var(--white);
+  padding: 100px 0;
 }
 
-.page-hero .eyebrow {
-  margin-bottom: 12px;
+.join .eyebrow {
   color: var(--accent);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
-.page-hero h1 {
-  max-width: 850px;
-  margin: 0 0 20px;
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
-  line-height: 1.05;
-}
-
-.page-intro {
-  max-width: 720px;
-  margin: 0;
-  font-size: 1.2rem;
-  line-height: 1.7;
-  color: var(--white);
-}
-
-.content-section {
-  padding: 80px 0;
-}
-
-.narrow-content {
-  max-width: 850px;
-}
-
-.narrow-content h2 {
-  margin-bottom: 24px;
-}
-
-.narrow-content p {
-  line-height: 1.8;
-}
-
-.section-heading {
-  max-width: 760px;
-  margin-bottom: 45px;
-}
-
-.section-heading h2 {
-  margin-bottom: 15px;
-}
-
-.section-heading p {
-  line-height: 1.7;
-}
-
-.trainers-section {
-  background: var(--soft);
-}
-
-.trainer-grid {
+.join-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 30px;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 90px;
 }
 
-.trainer-card {
-  overflow: hidden;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 18px;
+.join-intro {
+  margin-top: 24px;
+  max-width: 430px;
+  color: #dce1e5;
+  font-size: 17px;
 }
 
-.trainer-photo {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background: var(--soft);
+.join-steps {
+  margin: 0;
 }
 
-.trainer-photo img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
+.join ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.placeholder-photo {
-  display: flex;
+.join li {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.join li > span {
+  font-weight: 900;
+}
+
+.join li strong {
+  font-size: 20px;
+}
+
+.join li p {
+  margin: 4px 0 0;
+  color: var(--accent);
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+  background: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 80px;
   align-items: center;
-  justify-content: center;
-  background: var(--soft);
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-weight: 600;
 }
 
-.trainer-content {
-  padding: 28px;
+.contact-card {
+  display: grid;
+  gap: 15px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 30px;
+  border-radius: 10px;
 }
 
-.trainer-content h3 {
-  margin: 0 0 8px;
-  font-size: 1.5rem;
+.contact-card a:not(.button) {
+  font-size: 19px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
-.trainer-role {
-  margin: 0 0 8px;
-  color: var(--ink);
-  font-weight: 700;
+/* =========================================================
+   FOOTER - GENERAL
+   ========================================================= */
+
+footer {
+  background: var(--ink);
+  color: #bfc6cc;
+  padding: 30px 0;
+  font-size: 13px;
 }
 
-.trainer-languages {
-  margin: 0 0 18px;
-  color: var(--muted);
-  font-size: 0.95rem;
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.trainer-content > p:last-child {
-  line-height: 1.7;
-}
-
-.cta-section {
-  padding: 80px 0;
-  background: var(--accent);
-  color: var(--ink);
-  text-align: center;
-}
-
-.cta-section h2 {
-  margin-bottom: 15px;
-}
-
-.cta-section p {
-  max-width: 650px;
-  margin: 0 auto 25px;
-  line-height: 1.7;
-}
-
-@media (max-width: 850px) {
-
-  .page-hero {
-    padding: 65px 0 50px;
-  }
-
-  .content-section {
-    padding: 60px 0;
-  }
-
-  .trainer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .trainer-content {
-    padding: 24px;
-  }
-
+.footer strong {
+  color: white;
 }
 
 /* =========================================================
@@ -865,19 +952,6 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   line-height: 1.8;
 }
 
-.section-heading {
-  max-width: 760px;
-  margin-bottom: 45px;
-}
-
-.section-heading h2 {
-  margin-bottom: 15px;
-}
-
-.section-heading p {
-  line-height: 1.7;
-}
-
 .trainers-section {
   background: var(--soft);
 }
@@ -960,25 +1034,10 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   margin: 0 auto 25px;
   line-height: 1.7;
 }
-
-@media (max-width: 850px) {
-
-  .page-hero {
-    padding: 65px 0 50px;
-  }
-
-  .content-section {
-    padding: 60px 0;
-  }
-
-  .trainer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .trainer-content {
-    padding: 24px;
-  }
-
+/* TRAINER NAMES & LANGUAGES */
+.trainer-content h3,
+.trainer-languages {
+  font-weight: 700;
 }
 
 /* =========================================================
@@ -1039,21 +1098,6 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   line-height: 1.8;
 }
 
-@media (max-width: 850px) {
-
-  .community-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .community-photo {
-    aspect-ratio: 16 / 10;
-  }
-
-  .community-message {
-    padding: 32px 24px;
-  }
-
-}
 /* =========================================================
    INFORMATION PAGE
    ========================================================= */
@@ -1091,17 +1135,6 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   color: var(--accent);
 }
 
-@media (max-width: 850px) {
-
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .info-card {
-    padding: 26px;
-  }
-
-}
 /* =========================================================
    MOHAMMAD PROFILE PAGE
    ========================================================= */
@@ -1139,18 +1172,6 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   margin-bottom: 20px;
 }
 
-@media (max-width: 850px) {
-
-  .profile-layout {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .profile-photo {
-    max-width: 500px;
-  }
-
-}
 /* =========================================================
    AC-BERLIN HEADER LOGO
    ========================================================= */
@@ -1170,17 +1191,16 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
 }
 
 .brand-text strong {
-  font-size: 1rem;
-  letter-spacing: .04em;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
 }
 
 .brand-text span {
   margin-top: 3px;
-  font-size: .72rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
 }
-
 
 /* =========================================================
    AC-BERLIN SITE FOOTER
@@ -1254,7 +1274,7 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   gap: 14px;
   margin-top: 40px;
   padding-top: 28px;
-  border-top: 1px solid rgba(255,255,255,.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .footer-logo {
@@ -1271,17 +1291,194 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   gap: 20px;
   margin-top: 28px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   color: #bfc6cc;
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
+.footer-bottom a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 12px;
+}
+
+.footer-bottom a:hover {
+  color: var(--accent);
+}
 
 /* =========================================================
-   HEADER + FOOTER MOBILE
+   CONTACT ANCHOR
+   ========================================================= */
+
+#kontakt {
+  scroll-margin-top: 100px;
+}
+
+/* =========================================================
+   MAIN MOBILE
    ========================================================= */
 
 @media (max-width: 850px) {
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 14px;
+    right: 14px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .main-nav a:hover {
+    color: var(--ink);
+    background: var(--paper);
+  }
+
+  .main-nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-content,
+  .intro-grid,
+  .section-heading,
+  .sport-grid,
+  .welcome-grid,
+  .join-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    gap: 45px;
+  }
+
+  .section-heading {
+    gap: 20px;
+  }
+
+  .sport-grid {
+    gap: 14px;
+  }
+
+  /* TRAINING */
+
+  .training-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .training-info {
+    grid-template-columns: 1fr;
+  }
+
+  .training-page .training-info {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .training-page .training-card {
+    padding: 22px;
+  }
+
+  .training-box {
+    padding: 20px;
+  }
+
+  .training-box > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px 0;
+  }
+
+  .training-box > div > p {
+    grid-column: 1;
+  }
+
+  /* PORTRAITS */
+
+  .portrait-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* INFORMATION */
+
+  .information-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TRAINER */
+
+  .page-hero {
+    padding: 65px 0 50px;
+  }
+
+  .content-section {
+    padding: 60px 0;
+  }
+
+  .trainer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-content {
+    padding: 24px;
+  }
+
+  /* COMMUNITY */
+
+  .community-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .community-photo {
+    aspect-ratio: 16 / 10;
+  }
+
+  .community-message {
+    padding: 32px 24px;
+  }
+
+  /* INFORMATION PAGE */
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 26px;
+  }
+
+  /* PROFILE */
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .profile-photo {
+    max-width: 500px;
+  }
+
+  /* HEADER + FOOTER */
 
   .brand-logo {
     width: 44px;
@@ -1312,7 +1509,48 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
 
 }
 
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
 @media (max-width: 520px) {
+
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  .training-page .training-card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .training-box {
+    padding: 18px;
+  }
+
+  .training-box > div {
+    padding: 15px 0;
+  }
 
   .brand {
     gap: 8px;
@@ -1324,7 +1562,7 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   }
 
   .brand-text strong {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .footer-logo {
@@ -1333,6 +1571,141 @@ footer { background: var(--ink); color: #bfc6cc; padding: 30px 0; font-size: 13p
   }
 
 }
-#kontakt {
-  scroll-margin-top: 100px;
+
+/* Sport names in Training section */
+.training-title > .eyebrow {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
+
+
+/* Main navigation visibility */
+.main-nav a {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* Main page section labels */
+.section .eyebrow,
+.intro .eyebrow,
+.join .eyebrow,
+.contact .eyebrow {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   NEWS PAGE
+   ========================================================= */
+
+.news-page {
+  background: var(--paper);
+}
+
+.news-list {
+  display: grid;
+  gap: 24px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.news-item-image {
+  min-height: 240px;
+  background: var(--soft);
+  overflow: hidden;
+}
+
+.news-item-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.news-item-content {
+  padding: 30px 30px 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.news-item .news-date {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.news-category {
+  color: var(--ink);
+  background: var(--accent);
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.news-item h3 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.news-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.news-item .sport-more {
+  margin-top: 20px;
+}
+
+
+/* NEWS PAGE MOBILE */
+
+@media (max-width: 850px) {
+
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .news-item-image {
+    min-height: 250px;
+  }
+
+  .news-item-content {
+    padding: 25px;
+  }
+
+  .news-item h3 {
+    font-size: 1.7rem;
+  }
+
+}
+
