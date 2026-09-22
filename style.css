@@ -1708,4 +1708,10 @@ footer {
   }
 
 }
+/* TRAINING TIMES & ADDRESSES */
+.training-box > div > strong,
+.training-box > div > span,
+.training-box > div > p {
+  font-weight: 700;
+}
 
