@@ -1714,4 +1714,7 @@ footer {
 .training-box > div > p {
   font-weight: 700;
 }
+.hero h1 {
+  font-size: clamp(48px,7vw,84px);
+}
 
