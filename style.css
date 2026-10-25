@@ -1717,4 +1717,76 @@ footer {
 .hero h1 {
   font-size: clamp(48px,7vw,84px);
 }
+.contact-heading {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+.news-item-no-image .news-item-content {
+  justify-content: flex-start;
+  gap: 16px;
+}
 
+.news-item-no-image h3 {
+  max-width: 38ch;
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.3;
+}
+
+.news-item-no-image p {
+  max-width: 78ch;
+}
+
+@media (max-width: 850px) {
+  .news-item-no-image .news-item-content {
+    gap: 14px;
+  }
+
+  .news-item-no-image h3 {
+    font-size: 1.4rem;
+  }
+}
+/* Full-width, readable press-release cards */
+.news-page .news-list {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.news-page .news-item.news-item-no-image {
+  display: block;
+  width: 100%;
+}
+
+.news-page .news-item-no-image .news-item-content {
+  display: block;
+  width: 100%;
+  padding: 32px;
+}
+
+.news-page .news-item-no-image .news-item-meta {
+  margin: 0 0 16px;
+}
+
+.news-page .news-item-no-image h3,
+.news-page .news-item-no-image p {
+  width: 100%;
+  max-width: none;
+  text-align: left;
+}
+
+.news-page .news-item-no-image h3 {
+  margin: 0 0 18px;
+  font-size: clamp(1.25rem, 2.3vw, 1.7rem);
+  line-height: 1.35;
+}
+
+.news-page .news-item-no-image p + p {
+  margin-top: 16px;
+}
+
+@media (max-width: 850px) {
+  .news-page .news-item-no-image .news-item-content {
+    padding: 24px;
+  }
+}
