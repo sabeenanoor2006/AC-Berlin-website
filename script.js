@@ -6,16 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const menuToggle = document.getElementById("menuToggle");
   const mainNav = document.getElementById("mainNav");
+  const isGerman = document.documentElement.lang === "de";
+  const openMenuLabel = isGerman ? "Menü öffnen" : "Open menu";
+  const closeMenuLabel = isGerman ? "Menü schließen" : "Close menu";
 
   if (menuToggle && mainNav) {
-
     menuToggle.addEventListener("click", () => {
       const isOpen = mainNav.classList.toggle("active");
 
       menuToggle.setAttribute("aria-expanded", String(isOpen));
       menuToggle.setAttribute(
         "aria-label",
-        isOpen ? "Close menu" : "Open menu"
+        isOpen ? closeMenuLabel : openMenuLabel
       );
       menuToggle.textContent = isOpen ? "×" : "☰";
     });
@@ -25,12 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
         mainNav.classList.remove("active");
 
         menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open menu");
+        menuToggle.setAttribute("aria-label", openMenuLabel);
         menuToggle.textContent = "☰";
       });
     });
   }
-
 
   /* =========================================
      LANGUAGE SWITCHING
@@ -40,51 +41,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!languageButton) return;
 
-  const currentPage =
-    window.location.pathname.split("/").pop();
-
+  const currentPage = window.location.pathname.split("/").pop();
   let targetPage = null;
   let isEnglish = false;
 
   if (currentPage === "index.html" || currentPage === "") {
     targetPage = "index-en.html";
-  } 
-  else if (currentPage === "index-en.html") {
+  } else if (currentPage === "index-en.html") {
     targetPage = "index.html";
     isEnglish = true;
-  } 
-  else if (currentPage === "training.html") {
+  } else if (currentPage === "training.html") {
     targetPage = "training-en.html";
-  } 
-  else if (currentPage === "training-en.html") {
+  } else if (currentPage === "training-en.html") {
     targetPage = "training.html";
     isEnglish = true;
+  } else if (currentPage === "news.html") {
+    targetPage = "news-en.html";
+  } else if (currentPage === "news-en.html") {
+    targetPage = "news.html";
+    isEnglish = true;
   }
-else if (currentPage === "news.html") {
-  targetPage = "news-en.html";
-}
-else if (currentPage === "news-en.html") {
-  targetPage = "news.html";
-  isEnglish = true;
-}
-  /* Language button label */
 
   languageButton.textContent = isEnglish ? "DE" : "EN";
-
   languageButton.setAttribute(
     "aria-label",
-    isEnglish
-      ? "Auf Deutsch wechseln"
-      : "Switch to English"
+    isEnglish ? "Auf Deutsch wechseln" : "Switch to English"
   );
-
-  /* Language switch */
 
   if (targetPage) {
     languageButton.addEventListener("click", () => {
-      window.location.href =
-        targetPage + window.location.hash;
+      window.location.href = targetPage + window.location.hash;
     });
   }
 
 });
+
